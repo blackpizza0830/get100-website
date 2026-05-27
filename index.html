@@ -175,7 +175,7 @@
 
         <div>
           <span class="badge badge--yellow mb-16" style="display:inline-block;">입회 조건</span>
-          <h2 class="h2 mb-40">이런 분들이<br>GET100에 들어옵니다.</h2>
+          <h2 class="h2" style="margin-bottom:48px;">이런 분들이<br>GET100에 들어옵니다.</h2>
 
           <div class="stack gap-0">
             <div style="display:grid;grid-template-columns:28px 1fr;gap:16px;align-items:start;padding-block:20px;border-top:2px solid rgba(13,13,13,0.1);">
@@ -199,7 +199,7 @@
 
         <div>
           <span class="badge badge--yellow mb-16" style="display:inline-block;">멤버 소개</span>
-          <h2 class="h2 mb-40">이미 이런 분들이<br>들어와 있어요.</h2>
+          <h2 class="h2" style="margin-bottom:48px;">이미 이런 분들이<br>들어와 있어요.</h2>
 
           <div class="tag-grid mb-32">
             <span class="member-tag">"1인 사업가 시스템 설계자"</span>
@@ -210,8 +210,8 @@
             <span class="member-tag">"인생을 바꿀 책 커뮤니티 북겜블러"</span>
           </div>
 
-          <p style="font-size:0.9375rem;color:var(--c-yellow);line-height:1.75;word-break:keep-all;">
-            라벨이 평면적이지 않습니다. 모두 <strong style="color:var(--c-yellow);">자기만의 갈고리</strong>로 자기를 소개합니다.
+          <p style="font-size:0.9375rem;color:var(--c-white);line-height:1.75;word-break:keep-all;">
+            라벨이 평면적이지 않습니다. 모두 <strong style="color:var(--c-white);">자기만의 갈고리</strong>로 자기를 소개합니다.
           </p>
         </div>
 
@@ -229,7 +229,7 @@
       <h2 class="h2 mb-48">멤버들이 만든 진짜 변화</h2>
 
       <!-- Stat cards -->
-      <div class="grid-4 mb-64">
+      <div class="grid-4" style="margin-bottom:120px;">
 
         <div class="stat-card">
           <p class="stat-card__who">강사·예비 1인 사업자</p>
@@ -484,10 +484,7 @@
               <p class="vol-card__num">Vol. 02</p>
               <p class="vol-card__title">이수현 — 관계자본으로 살아가는 방식</p>
             </a>
-          </div>
-
-          <div style="margin-top:24px;">
-            <a href="letter.html" style="font-size:0.875rem;font-weight:700;color:var(--c-black);text-decoration:none;border-bottom:2px solid var(--c-black);padding-bottom:2px;">
+            <a href="letter.html" style="font-size:0.875rem;font-weight:700;color:var(--c-black);text-decoration:none;border-bottom:2px solid var(--c-black);padding-bottom:2px;display:inline-block;margin-top:8px;">
               전체 아카이브 보기 →
             </a>
           </div>
@@ -522,12 +519,12 @@
         <div>
           <span class="badge badge--yellow mb-16" style="display:inline-block;">사례</span>
           <div style="display:flex;flex-direction:column;gap:0;">
-            <div style="padding-block:16px;border-top:1px solid rgba(245,245,240,0.12);font-size:0.9375rem;color:rgba(245,245,240,0.85);">대기업 AI운동회</div>
-            <div style="padding-block:16px;border-top:1px solid rgba(245,245,240,0.12);font-size:0.9375rem;color:rgba(245,245,240,0.85);">50만 인플루언서 행사</div>
-            <div style="padding-block:16px;border-top:1px solid rgba(245,245,240,0.12);font-size:0.9375rem;color:rgba(245,245,240,0.85);">한의원 커뮤니티 코칭</div>
-            <div style="padding-block:16px;border-top:1px solid rgba(245,245,240,0.12);font-size:0.9375rem;color:rgba(245,245,240,0.85);">지역구 축제</div>
-            <div style="padding-block:16px;border-top:1px solid rgba(245,245,240,0.12);font-size:0.9375rem;color:rgba(245,245,240,0.85);">F&B 팝업</div>
-            <div style="padding-block:16px;border-top:1px solid rgba(245,245,240,0.12);border-bottom:1px solid rgba(245,245,240,0.12);font-size:0.9375rem;color:rgba(245,245,240,0.85);">네트워킹 파티</div>
+            <div class="case-item" style="border-top:1px solid rgba(245,245,240,0.12);">대기업 AI운동회</div>
+            <div class="case-item" style="border-top:1px solid rgba(245,245,240,0.12);">50만 인플루언서 행사</div>
+            <div class="case-item" style="border-top:1px solid rgba(245,245,240,0.12);">한의원 커뮤니티 코칭</div>
+            <div class="case-item" style="border-top:1px solid rgba(245,245,240,0.12);">지역구 축제</div>
+            <div class="case-item" style="border-top:1px solid rgba(245,245,240,0.12);">F&B 팝업</div>
+            <div class="case-item" style="border-top:1px solid rgba(245,245,240,0.12);border-bottom:1px solid rgba(245,245,240,0.12);">네트워킹 파티</div>
           </div>
         </div>
 
@@ -668,6 +665,19 @@
   </script>
 
   <style>
+    /* ===== 사례 리스트 호버 효과 ===== */
+    .case-item {
+      padding-block: 16px;
+      font-size: 0.9375rem;
+      color: rgba(245,245,240,0.85);
+      cursor: default;
+      transition: transform 0.2s cubic-bezier(0.22,1,0.36,1), color 0.15s ease;
+    }
+    .case-item:hover {
+      transform: translateX(12px);
+      color: var(--c-yellow);
+    }
+
     /* ===== SCROLL ANIMATION ===== */
     .fade-up {
       opacity: 0;
@@ -705,6 +715,12 @@
     }
     #letter .form-box .form-box__label { color: var(--c-muted) !important; }
     #letter #letterSuccess { color: var(--c-purple) !important; }
+    #letter .form-box .btn--black {
+      box-shadow: 5px 5px 0 0 var(--c-purple) !important;
+    }
+    #letter .form-box .btn--black:hover {
+      box-shadow: 8px 8px 0 0 var(--c-purple) !important;
+    }
 
     /* vol 카드 — 흰색 배경 */
     #letter .vol-card {
