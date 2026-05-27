@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>밤밤의 GET100 레터</title>
+  <meta name="description" content="연결·AI·시스템·콘텐츠로 살아가는 사람들의 이야기. 격주 수요일 도착.">
+  <meta property="og:title" content="밤밤의 GET100 레터">
+  <meta property="og:description" content="연결·AI·시스템·콘텐츠로 살아가는 사람들의 이야기.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" role="navigation">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo">GET<span>100</span></a>
+      <ul class="nav__links" role="list">
+        <li><a href="community.html">커뮤니티</a></li>
+        <li><a href="events.html">오프라인 행사 기획·운영</a></li>
+        <li><a href="letter.html" style="color:var(--c-white);">레터</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+      <a href="index.html#apply" class="btn btn--yellow nav__cta desktop">6기 신청</a>
+      <button class="nav__toggle" aria-label="메뉴 열기" onclick="toggleNav()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="nav__mobile" id="mobileNav">
+    <a href="community.html" onclick="toggleNav()">커뮤니티</a>
+    <a href="events.html" onclick="toggleNav()">오프라인 행사 기획·운영</a>
+    <a href="letter.html" onclick="toggleNav()">레터</a>
+    <a href="about.html" onclick="toggleNav()">About</a>
+    <a href="index.html#apply" onclick="toggleNav()" style="color:var(--c-yellow);margin-top:8px;">6기 신청 →</a>
+  </div>
+
+
+  <!-- ===================================================
+       HERO
+       =================================================== -->
+  <section class="section section--dark" style="padding-block:clamp(80px,12vw,140px);">
+    <div class="container">
+      <div style="max-width:680px;">
+        <span class="badge badge--yellow mb-24" style="display:inline-block;">뉴스레터</span>
+        <h1 class="display mb-24">밤밤의<br>GET100 레터</h1>
+        <p class="body-lg mb-16" style="color:rgba(245,245,240,0.72);word-break:keep-all;">
+          1인 사업가가 결국 다뤄야 할 것들 —
+        </p>
+        <p class="body-lg mb-48" style="color:rgba(245,245,240,0.72);word-break:keep-all;">
+          <em style="font-style:normal;color:var(--c-white);">연결·AI·시스템·콘텐츠로 살아가는 사람들의 이야기</em>를 전해드려요.
+        </p>
+        <p style="font-size:0.8125rem;font-weight:700;color:var(--c-yellow);letter-spacing:0.06em;margin-bottom:40px;">
+          격주 수요일 도착
+        </p>
+
+        <!-- Subscribe form -->
+        <div style="max-width:480px;">
+          <form id="heroLetterForm" onsubmit="handleSubscribe(event, 'heroSuccess')"
+                style="display:flex;gap:12px;flex-wrap:wrap;">
+            <input class="input input--white" type="email" id="hero-email"
+                   placeholder="이메일 주소" required autocomplete="email"
+                   style="flex:1;min-width:200px;">
+            <button type="submit" class="btn btn--yellow">구독하기</button>
+          </form>
+          <p id="heroSuccess" style="display:none;margin-top:16px;font-size:0.875rem;font-weight:600;color:var(--c-yellow);">
+            ✓ 구독 신청이 완료되었습니다. 다음 호에서 만나요!
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===================================================
+       아카이브
+       =================================================== -->
+  <section class="section section--white" id="archive">
+    <div class="container">
+      <p class="label mb-16" style="color:var(--c-muted);">아카이브</p>
+      <h2 class="h2 mb-48">지난 호 읽기</h2>
+
+      <div style="display:flex;flex-direction:column;gap:0;">
+
+        <!-- Vol.01 -->
+        <a href="letter/vol01.html" id="vol01"
+           style="display:grid;grid-template-columns:80px 1fr auto;align-items:center;gap:32px;
+                  padding-block:32px;border-top:2px solid rgba(13,13,13,0.1);
+                  text-decoration:none;color:var(--c-black);transition:background 120ms ease-out;"
+           onmouseover="this.style.background='rgba(13,13,13,0.03)'"
+           onmouseout="this.style.background='transparent'">
+          <span style="font-size:0.6875rem;font-weight:700;letter-spacing:0.12em;
+                       text-transform:uppercase;color:var(--c-purple);">Vol.01</span>
+          <div>
+            <p style="font-size:1.125rem;font-weight:700;margin-bottom:6px;word-break:keep-all;">
+              페이팔 마피아 — 어떻게 그들은 서로를 밀어올렸나
+            </p>
+            <p style="font-size:0.875rem;color:var(--c-muted);word-break:keep-all;">
+              관계자본이 어떻게 집단적 성공으로 이어지는지, 페이팔 마피아의 사례로 풀어봅니다.
+            </p>
+          </div>
+          <span style="font-size:1.25rem;color:rgba(13,13,13,0.25);">→</span>
+        </a>
+
+        <!-- Vol.02 -->
+        <a href="letter/vol02.html" id="vol02"
+           style="display:grid;grid-template-columns:80px 1fr auto;align-items:center;gap:32px;
+                  padding-block:32px;border-top:2px solid rgba(13,13,13,0.1);border-bottom:2px solid rgba(13,13,13,0.1);
+                  text-decoration:none;color:var(--c-black);transition:background 120ms ease-out;"
+           onmouseover="this.style.background='rgba(13,13,13,0.03)'"
+           onmouseout="this.style.background='transparent'">
+          <span style="font-size:0.6875rem;font-weight:700;letter-spacing:0.12em;
+                       text-transform:uppercase;color:var(--c-yellow);
+                       -webkit-text-stroke:1px var(--c-black);">Vol.02</span>
+          <div>
+            <p style="font-size:1.125rem;font-weight:700;margin-bottom:6px;word-break:keep-all;">
+              이수현 — 관계자본으로 살아가는 방식
+            </p>
+            <p style="font-size:0.875rem;color:var(--c-muted);word-break:keep-all;">
+              연결을 자산으로 만드는 사람, 이수현의 이야기.
+            </p>
+          </div>
+          <span style="font-size:1.25rem;color:rgba(13,13,13,0.25);">→</span>
+        </a>
+
+      </div>
+
+      <!-- More coming -->
+      <div style="margin-top:48px;padding:28px;border:2px solid rgba(13,13,13,0.1);max-width:480px;">
+        <p style="font-size:0.875rem;color:var(--c-muted);line-height:1.75;word-break:keep-all;">
+          다음 호도 격주 수요일에 도착합니다.<br>구독하면 놓치지 않을 수 있어요.
+        </p>
+        <form id="archiveLetterForm" onsubmit="handleSubscribe(event, 'archiveSuccess')"
+              style="display:flex;gap:12px;margin-top:20px;flex-wrap:wrap;">
+          <input class="input input--dark" type="email" id="archive-email"
+                 placeholder="이메일 주소" required autocomplete="email"
+                 style="flex:1;min-width:180px;">
+          <button type="submit" class="btn btn--black">구독하기</button>
+        </form>
+        <p id="archiveSuccess" style="display:none;margin-top:12px;font-size:0.875rem;font-weight:600;color:var(--c-purple);">
+          ✓ 구독 신청이 완료되었습니다.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===================================================
+       레터 소개 — 밤밤 소개
+       =================================================== -->
+  <section class="section section--dark" id="about-letter">
+    <div class="container">
+      <div style="max-width:640px;">
+        <p class="label mb-24 accent-yellow">레터를 쓰는 사람</p>
+        <h2 class="h2 mb-32">밤밤 (GET100 대표)</h2>
+        <div style="display:flex;flex-direction:column;gap:20px;font-size:1rem;
+                    line-height:1.85;color:rgba(245,245,240,0.8);word-break:keep-all;">
+          <p>
+            GET100 커뮤니티를 운영하면서 매일 묻게 됩니다.
+            <em style="font-style:normal;color:var(--c-white);">어떻게 하면 강력한 개인들이 더 잘 연결될 수 있을까?</em>
+          </p>
+          <p>
+            그 고민의 흔적이 레터가 됩니다.
+            연결·AI·시스템·콘텐츠 — 1인 사업가가 결국 다뤄야 할 것들을 함께 생각합니다.
+          </p>
+        </div>
+
+        <div style="margin-top:48px;padding:24px 28px;border:2px solid rgba(245,245,240,0.15);">
+          <p style="font-size:0.6875rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;
+                    color:rgba(245,245,240,0.4);margin-bottom:16px;">채널</p>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;">
+            <a href="https://instagram.com/bam.bam_2" target="_blank" rel="noopener"
+               style="font-size:0.875rem;color:rgba(245,245,240,0.7);text-decoration:none;
+                      border-bottom:1px solid rgba(245,245,240,0.3);padding-bottom:2px;">
+              인스타 @bam.bam_2
+            </a>
+            <a href="#" target="_blank" rel="noopener"
+               style="font-size:0.875rem;color:rgba(245,245,240,0.7);text-decoration:none;
+                      border-bottom:1px solid rgba(245,245,240,0.3);padding-bottom:2px;">
+              스레드
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__top">
+        <div>
+          <p class="footer__brand-name">GET<span>100</span></p>
+          <p class="footer__tagline">기업형 1인 사업가들의 커뮤니티</p>
+          <div class="footer__social">
+            <a href="#" aria-label="디스코드">Discord</a>
+            <a href="https://instagram.com/bam.bam_2" target="_blank" rel="noopener">@bam.bam_2</a>
+            <a href="#" target="_blank" rel="noopener">@겟백공식</a>
+            <a href="#" target="_blank" rel="noopener">스레드</a>
+            <a href="#" target="_blank" rel="noopener">링크드인</a>
+            <a href="#" target="_blank" rel="noopener">유튜브</a>
+          </div>
+        </div>
+        <div>
+          <p class="footer__nav-title">메뉴</p>
+          <ul class="footer__nav-links">
+            <li><a href="community.html">커뮤니티</a></li>
+            <li><a href="events.html">오프라인 행사 기획·운영</a></li>
+            <li><a href="letter.html">레터</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="index.html#apply">6기 신청</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer__nav-title">문의</p>
+          <ul class="footer__nav-links">
+            <li><a href="mailto:[FILL]">[FILL: 이메일]</a></li>
+            <li><a href="events.html#inquiry">행사 의뢰</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div>
+          <p class="footer__biz">
+            상호: [FILL] &nbsp;·&nbsp; 사업자번호: [FILL] &nbsp;·&nbsp; 주소: [FILL]<br>
+            메일: [FILL]
+          </p>
+          <p class="footer__copy">© 2026 GET100. All rights reserved.</p>
+        </div>
+        <div class="footer__policy">
+          <a href="#">개인정보처리방침</a>
+          <a href="#">이용약관</a>
+          <a href="#">광고성 정보 수신</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleNav() {
+      document.getElementById('mobileNav').classList.toggle('open');
+    }
+    function handleSubscribe(e, successId) {
+      e.preventDefault();
+      e.target.style.display = 'none';
+      document.getElementById(successId).style.display = 'block';
+      // TODO: Stibee API 연동
+    }
+    document.addEventListener('click', (e) => {
+      const nav = document.getElementById('mobileNav');
+      const toggle = document.querySelector('.nav__toggle');
+      if (!nav.contains(e.target) && !toggle.contains(e.target)) {
+        nav.classList.remove('open');
+      }
+    });
+  </script>
+
+  <style>
+    @media (max-width: 600px) {
+      a[style*="grid-template-columns:80px"] {
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+      }
+    }
+  </style>
+
+</body>
+</html>

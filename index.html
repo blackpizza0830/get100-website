@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GET100 — 기업형 1인 사업가들의 커뮤니티</title>
+  <meta name="description" content="콘텐츠·AI·연결을 다루는 강력한 개인들이 모이는 커뮤니티. 100명의 관계자본을 얻어라.">
+  <meta property="og:title" content="GET100 — 기업형 1인 사업가들의 커뮤니티">
+  <meta property="og:description" content="콘텐츠·AI·연결을 다루는 강력한 개인들이 모이는 커뮤니티.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ko_KR">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="nav" role="navigation" aria-label="주 메뉴">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo">GET<span>100</span></a>
+
+      <ul class="nav__links" role="list">
+        <li><a href="community.html">커뮤니티</a></li>
+        <li><a href="events.html">오프라인 행사 기획·운영</a></li>
+        <li><a href="letter.html">레터</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+
+      <a href="#apply" class="btn btn--yellow nav__cta desktop">6기 신청</a>
+
+      <button class="nav__toggle" aria-label="메뉴 열기" onclick="toggleNav()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile nav -->
+  <div class="nav__mobile" id="mobileNav">
+    <a href="community.html" onclick="toggleNav()">커뮤니티</a>
+    <a href="events.html" onclick="toggleNav()">오프라인 행사 기획·운영</a>
+    <a href="letter.html" onclick="toggleNav()">레터</a>
+    <a href="about.html" onclick="toggleNav()">About</a>
+    <a href="#apply" onclick="toggleNav()" style="color:var(--c-yellow);margin-top:8px;">6기 신청 →</a>
+  </div>
+
+
+  <!-- ===================================================
+       §1 HERO
+       =================================================== -->
+  <section class="section section--dark" id="hero" style="padding-block: clamp(80px,12vw,140px);">
+    <div class="container">
+      <div style="max-width:760px;">
+        <span class="badge badge--yellow mb-24" style="display:inline-block;">Community</span>
+        <h1 class="display mb-24">
+          기업형 1인 사업가들의<br>커뮤니티, GET100.
+        </h1>
+        <p class="body-lg mb-48" style="color:rgba(245,245,240,0.72);max-width:540px;">
+          콘텐츠·AI·연결을 다루는 강력한 개인들이 모이는 곳.
+        </p>
+        <div class="cluster gap-16">
+          <a href="#apply" class="btn btn--yellow">6기 신청하기</a>
+          <a href="events.html" class="btn btn--outline-white">오프라인 행사 기획·운영</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===================================================
+       §2 겟백이란
+       =================================================== -->
+  <section class="section section--white" id="about-section">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;">
+        <div>
+          <p class="label mb-16" style="color:var(--c-muted);">겟백이란</p>
+          <p class="h2 mb-32">우리가 자주 던지는 슬로건이 있습니다.</p>
+          <p class="h1" style="color:var(--c-black);line-height:1.15;">
+            "100명의 관계자본을<br>얻어라."
+          </p>
+        </div>
+        <div style="padding-top:clamp(0px,4vw,56px);">
+          <div class="stack gap-24" style="font-size:1rem;line-height:1.85;color:#333;word-break:keep-all;">
+            <p>처음 들으면 인맥 만들라는 말처럼 들립니다. 그런데 진짜 의미는 그 다음에 있어요.</p>
+            <p>
+              우리가 말하는 <strong>관계자본</strong>은 함께 일을 해본 사람한테서 쌓이는 자본입니다.
+              서로 어떻게 일하는지 알게 된 사람들 사이에서요.
+            </p>
+            <p>
+              그걸 얻는 방식이 —&nbsp;
+              <strong style="color:var(--c-purple);">이타적 기회주의자로 사는 것</strong>입니다.
+            </p>
+            <p>
+              먼저 흔쾌히 줍니다. 그러면 관계가 쌓이고, 기회가 옵니다.
+              받았으니 또 줍니다. 이 순환이 작동하는 사람.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===================================================
+       §3 한 달의 흐름
+       =================================================== -->
+  <section class="section section--dark" id="rhythm">
+    <div class="container">
+      <p class="label mb-16 accent-yellow">4주 커리큘럼</p>
+      <h2 class="h1 mb-64">4주가 지나면,<br>일하는 방식이 바뀝니다.</h2>
+
+      <div style="max-width:720px;">
+        <div class="timeline">
+
+          <div class="timeline__step">
+            <span class="timeline__num">OT</span>
+            <div class="timeline__content">
+              <h3>GET100이 작동하는 원리</h3>
+              <p>커뮤니티가 어떻게 설계되어 있는지, 4주를 어떻게 써야 하는지 안내합니다.</p>
+            </div>
+          </div>
+
+          <div class="timeline__step">
+            <span class="timeline__num">01</span>
+            <div class="timeline__content">
+              <h3>SNS를 통한 관계 구축</h3>
+              <p>스레드·인스타 등 SNS 채널로 나를 알리고, 관계의 첫 씨앗을 심습니다.</p>
+            </div>
+          </div>
+
+          <div class="timeline__step">
+            <span class="timeline__num">02</span>
+            <div class="timeline__content">
+              <h3>이타적 기회주의 — 커피챗은 신청이 아닌 제안</h3>
+              <p>공짜 마케터를 만드는 방법. 먼저 주는 사람이 결국 더 많이 얻는 구조를 익힙니다.</p>
+            </div>
+          </div>
+
+          <div class="timeline__step">
+            <span class="timeline__num">03</span>
+            <div class="timeline__content">
+              <h3>이너서클 커뮤니티</h3>
+              <p>만드는 게 아니라 형성되는 것. 신뢰 관계가 자연스럽게 깊어지는 주간입니다.</p>
+            </div>
+          </div>
+
+          <div class="timeline__step">
+            <span class="timeline__num">04</span>
+            <div class="timeline__content">
+              <h3>성장 공유회 + 길드 결성</h3>
+              <p>4주의 변화를 돌아보고, 지속될 소모임(길드)을 결성합니다.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div style="margin-top:48px;padding:24px 28px;border:2px solid rgba(245,245,240,0.15);">
+          <p style="font-size:0.875rem;color:rgba(245,245,240,0.6);line-height:1.8;">
+            매주 월·화 Zoom + 디스코드 상시 운영. 매일 오전 10시 AI 글감 에이전트 제공.
+          </p>
+          <p style="margin-top:12px;font-size:1rem;font-weight:700;color:var(--c-yellow);">
+            한 달이 지나면 100스테이지로 평생 연결됩니다.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===================================================
+       §4 누가 들어오는가
+       =================================================== -->
+  <section class="section section--white" id="who">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;">
+
+        <div>
+          <p class="label mb-16" style="color:var(--c-muted);">입회 조건</p>
+          <h2 class="h2 mb-40">이런 분들이<br>GET100에 들어옵니다.</h2>
+
+          <div class="stack gap-0">
+            <div style="display:grid;grid-template-columns:28px 1fr;gap:16px;align-items:start;padding-block:20px;border-top:2px solid rgba(13,13,13,0.1);">
+              <span style="font-size:0.6875rem;font-weight:700;color:var(--c-purple);letter-spacing:0.08em;padding-top:3px;">01</span>
+              <p style="font-size:0.9375rem;line-height:1.75;word-break:keep-all;">1인 사업가·크리에이터로 활동·준비 중</p>
+            </div>
+            <div style="display:grid;grid-template-columns:28px 1fr;gap:16px;align-items:start;padding-block:20px;border-top:2px solid rgba(13,13,13,0.1);">
+              <span style="font-size:0.6875rem;font-weight:700;color:var(--c-purple);letter-spacing:0.08em;padding-top:3px;">02</span>
+              <p style="font-size:0.9375rem;line-height:1.75;word-break:keep-all;">매출은 나오지만 다음 확장을 고민하고 있는 분</p>
+            </div>
+            <div style="display:grid;grid-template-columns:28px 1fr;gap:16px;align-items:start;padding-block:20px;border-top:2px solid rgba(13,13,13,0.1);">
+              <span style="font-size:0.6875rem;font-weight:700;color:var(--c-purple);letter-spacing:0.08em;padding-top:3px;">03</span>
+              <p style="font-size:0.9375rem;line-height:1.75;word-break:keep-all;">콘텐츠는 올리는데 스토리와 팬이 쌓이지 않는 분</p>
+            </div>
+            <div style="display:grid;grid-template-columns:28px 1fr;gap:16px;align-items:start;padding-block:20px;border-top:2px solid rgba(13,13,13,0.1);border-bottom:2px solid rgba(13,13,13,0.1);">
+              <span style="font-size:0.6875rem;font-weight:700;color:var(--c-purple);letter-spacing:0.08em;padding-top:3px;">04</span>
+              <p style="font-size:0.9375rem;line-height:1.75;word-break:keep-all;">혼자 성장하는 방식의 한계를 체감한 분</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <p class="label mb-16" style="color:var(--c-muted);">멤버 소개</p>
+          <h2 class="h2 mb-40">이미 이런 분들이<br>들어와 있어요.</h2>
+
+          <div class="tag-grid mb-32">
+            <span class="member-tag">"1인 사업가 시스템 설계자"</span>
+            <span class="member-tag">"자동화 시스템 구축하는 띵크"</span>
+            <span class="member-tag">"개발 잘 하는 사업가"</span>
+            <span class="member-tag">"혼자서도 팀처럼 일하게 만드는 시스템 설계자"</span>
+            <span class="member-tag">"사람의 매력과 성장을 연결하는 소셜링 기획자"</span>
+            <span class="member-tag">"인생을 바꿀 책 커뮤니티 북겜블러"</span>
+          </div>
+
+          <p style="font-size:0.9375rem;color:var(--c-muted);line-height:1.75;word-break:keep-all;">
+            라벨이 평면적이지 않습니다. 모두 <strong style="color:var(--c-black);">자기만의 갈고리</strong>로 자기를 소개합니다.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===================================================
+       §5 멤버들이 만든 진짜 변화
+       =================================================== -->
+  <section class="section section--white" id="proof" style="border-top:2px solid rgba(13,13,13,0.08);">
+    <div class="container">
+      <p class="label mb-16" style="color:var(--c-muted);">사회적 증명</p>
+      <h2 class="h2 mb-48">멤버들이 만든 진짜 변화</h2>
+
+      <!-- Stat cards -->
+      <div class="grid-4 mb-64">
+
+        <div class="stat-card">
+          <div class="stat-card__icon">🎯</div>
+          <p class="stat-card__who">강사·예비 1인 사업자</p>
+          <p class="stat-card__num">8.7만 뷰<br>+821 팔로워</p>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-card__icon">☕</div>
+          <p class="stat-card__who">대기업 인사담당자·강남 카페 사장</p>
+          <p class="stat-card__num">월 +20만 뷰<br>+1,000 팔로워</p>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-card__icon">📰</div>
+          <p class="stat-card__who">인터넷 언론사 대표</p>
+          <p class="stat-card__num" style="font-size:1.125rem;">무료 기사 →<br><span style="font-size:1.5rem;">300만원</span> 계약 성사</p>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-card__icon">🎨</div>
+          <p class="stat-card__who">디자인 스튜디오 1인 사업가</p>
+          <p class="stat-card__num">조회수 5배<br>커피챗 문의 다수</p>
+        </div>
+
+      </div>
+
+      <!-- Quotes -->
+      <div class="grid-2" style="gap:20px;">
+
+        <div class="quote-card">
+          <div class="quote-card__who">
+            <div class="quote-card__dot quote-card__dot--purple"></div>
+            <span class="quote-card__label">1기 멤버 · 소통·NVC 강사</span>
+          </div>
+          <p class="quote-card__text">"과거에는 관계가 시간이 지나면 끊어졌는데, 이제는 내가 소중하게 여기는 사람을 인지하고 서로 협력할 수 있도록 시스템을 만들게 되었어요."</p>
+        </div>
+
+        <div class="quote-card">
+          <div class="quote-card__who">
+            <div class="quote-card__dot quote-card__dot--yellow"></div>
+            <span class="quote-card__label">2기 멤버 · 책쓰기 코호트 운영자</span>
+          </div>
+          <p class="quote-card__text">"예전에는 어디선가 좋은 기회가 들어오기만을 마냥 기다렸어요. 지금은 어떤 고민이 생겼을 때 누구와 함께 하면 좋을지 정하고, 그 의도에 맞는 콘텐츠를 적게 됐어요."</p>
+        </div>
+
+        <div class="quote-card">
+          <div class="quote-card__who">
+            <div class="quote-card__dot quote-card__dot--purple"></div>
+            <span class="quote-card__label">3기 멤버 · 노션 크리에이터</span>
+          </div>
+          <p class="quote-card__text">"AI를 통해 어떻게 글을 정제해서 쓸 수 있는지 알게 되었고, 거의 대부분의 커피챗과 협업 요청이 스레드로 들어옵니다."</p>
+        </div>
+
+        <div class="quote-card">
+          <div class="quote-card__who">
+            <div class="quote-card__dot quote-card__dot--yellow"></div>
+            <span class="quote-card__label">4기 멤버 · 개발 콘텐츠 1인 사업가</span>
+          </div>
+          <p class="quote-card__text">"모객, 고객 만들기에 초점을 두었었다면, 나를 드러내는 것을 좀 더 해보고 있습니다."</p>
+        </div>
+
+        <div class="quote-card">
+          <div class="quote-card__who">
+            <div class="quote-card__dot quote-card__dot--purple"></div>
+            <span class="quote-card__label">1·4기 멤버 · 성교육 강사</span>
+          </div>
+          <p class="quote-card__text">"내가 어떤 사람들과 네트워킹 해야 할지 보게 되었고, 어디서라도 일감을 따올 수 있다는 자신감이 생겼습니다."</p>
+        </div>
+
+        <div class="quote-card">
+          <div class="quote-card__who">
+            <div class="quote-card__dot quote-card__dot--yellow"></div>
+            <span class="quote-card__label">2기 멤버 · 티앤웰니스 디렉터·작가</span>
+          </div>
+          <p class="quote-card__text">"본질을 쫓는 이들은 결국 만난다는 생각을 하게 됐고, 꾸준히 지속할 수 있는 편안함이 SNS의 본질임을 다시 깨달았어요."</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===================================================
+       §6 6기 신청 — Yellow 섹션
+       =================================================== -->
+  <section class="section section--yellow" id="apply">
+    <div class="container">
+      <div style="max-width:680px;">
+        <p class="label mb-16">6기 신청</p>
+        <h2 class="h1 mb-32">GET100 6기</h2>
+
+        <!-- Price ladder -->
+        <div class="price-ladder mb-8">
+          <span class="price-old">1기 30만</span>
+          <span class="price-ladder__arrow">→</span>
+          <span class="price-old">2기 35만</span>
+          <span class="price-ladder__arrow">→</span>
+          <span class="price-old">3기 40만</span>
+          <span class="price-ladder__arrow">→</span>
+          <span class="price-old">4기 45만</span>
+          <span class="price-ladder__arrow">→</span>
+          <span class="price-old">5기 50만</span>
+          <span class="price-ladder__arrow">→</span>
+          <strong style="font-size:1.25rem;letter-spacing:-0.01em;">6기 55만원</strong>
+        </div>
+
+        <div style="display:flex;align-items:center;gap:16px;margin-bottom:40px;flex-wrap:wrap;">
+          <span style="display:inline-flex;align-items:center;gap:8px;font-size:0.9375rem;font-weight:700;">
+            <span style="width:8px;height:8px;background:var(--c-black);display:inline-block;"></span>
+            2026년 7월 6일 시작
+          </span>
+          <span style="display:inline-flex;align-items:center;gap:8px;font-size:0.9375rem;font-weight:700;">
+            <span style="width:8px;height:8px;background:var(--c-black);display:inline-block;"></span>
+            정원 10명
+          </span>
+        </div>
+
+        <p style="font-size:0.9375rem;line-height:1.85;margin-bottom:40px;word-break:keep-all;max-width:540px;">
+          신청 주시면 — <strong>밤밤이 직접 전화로 짧은 인터뷰</strong>를 진행한 뒤 입금 안내를 보내드려요.
+          <em>서로 잘 맞는지 확인하는 자리예요.</em>
+        </p>
+
+        <!-- Apply form -->
+        <form class="form" id="applyForm" onsubmit="handleApplySubmit(event)">
+          <div class="form__field">
+            <label class="form__label" for="apply-email">이메일 *</label>
+            <input class="input input--dark" type="email" id="apply-email" name="email"
+                   placeholder="hello@example.com" required autocomplete="email">
+          </div>
+
+          <div class="form__field">
+            <label class="form__label" for="apply-phone">전화번호 *</label>
+            <input class="input input--dark" type="tel" id="apply-phone" name="phone"
+                   placeholder="010-0000-0000" required autocomplete="tel">
+          </div>
+
+          <div class="form__checkbox">
+            <input type="checkbox" id="apply-consent" name="marketing_consent" required>
+            <label for="apply-consent" style="font-size:0.875rem;line-height:1.7;word-break:keep-all;">
+              <strong>[필수]</strong> 마케팅 정보 수신에 동의합니다. 신청 확인 및 GET100 관련 정보를 받아보실 수 있습니다.
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn--black" style="width:100%;justify-content:center;margin-top:8px;">
+            신청하기
+          </button>
+        </form>
+
+        <p id="applySuccess" style="display:none;margin-top:20px;padding:16px 20px;border:2px solid var(--c-black);font-weight:600;font-size:0.9375rem;">
+          ✓ 신청이 완료되었습니다. 밤밤이 직접 연락드릴 예정이에요.
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===================================================
+       §App GET100 앱 (베타)
+       =================================================== -->
+  <section class="section section--gray" id="app">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;">
+
+        <div>
+          <span class="badge badge--yellow mb-24" style="display:inline-block;">Beta</span>
+          <h2 class="h2 mb-16">GET100 앱 (베타)</h2>
+          <p class="h3 mb-32" style="color:rgba(245,245,240,0.8);font-weight:400;">
+            내 관계자본의 백오피스.
+          </p>
+          <p style="font-size:0.9375rem;color:rgba(245,245,240,0.65);line-height:1.8;margin-bottom:40px;word-break:keep-all;">
+            머리로 외우지 않아도 되는 관계자본 운영 도구.
+          </p>
+
+          <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
+            <a href="#" class="btn btn--yellow">앱 시작하기 →</a>
+            <span style="font-size:0.8125rem;color:rgba(245,245,240,0.5);">지금 베타 사용 가능</span>
+          </div>
+        </div>
+
+        <div>
+          <div class="feature-list">
+            <div class="feature-list__item">
+              <span class="feature-list__num">01</span>
+              <p class="feature-list__text">누구를 언제 만났는지 기록</p>
+            </div>
+            <div class="feature-list__item">
+              <span class="feature-list__num">02</span>
+              <p class="feature-list__text">어떤 대화를 나눴는지 메모</p>
+            </div>
+            <div class="feature-list__item">
+              <span class="feature-list__num">03</span>
+              <p class="feature-list__text">이때 팔로업해야 할 일 알림</p>
+            </div>
+            <div class="feature-list__item">
+              <span class="feature-list__num">04</span>
+              <p class="feature-list__text">그래서 다음 행동까지 자연스럽게</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===================================================
+       §7 밤밤의 GET100 레터
+       =================================================== -->
+  <section class="section section--white" id="letter">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;">
+
+        <div>
+          <p class="label mb-16" style="color:var(--c-muted);">뉴스레터</p>
+          <h2 class="h2 mb-24">밤밤의 GET100 레터</h2>
+          <p style="font-size:1rem;line-height:1.85;color:#444;margin-bottom:12px;word-break:keep-all;">
+            1인 사업가가 결국 다뤄야 할 것들 —
+          </p>
+          <p style="font-size:1rem;line-height:1.85;color:#444;margin-bottom:32px;word-break:keep-all;">
+            <em>연결·AI·시스템·콘텐츠로 살아가는 사람들의 이야기</em>를 전해드려요.
+          </p>
+          <p style="font-size:0.8125rem;font-weight:600;color:var(--c-purple);letter-spacing:0.04em;margin-bottom:40px;">
+            격주 수요일 도착
+          </p>
+
+          <!-- Stibee embed placeholder -->
+          <div style="padding:28px;border:2px solid var(--c-black);background:var(--c-white);box-shadow:var(--shadow-b);">
+            <p style="font-size:0.75rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--c-muted);margin-bottom:16px;">구독하기</p>
+            <!-- Stibee 폼 임베드 위치 — Stibee 셋업 후 코드 교체 -->
+            <div class="form" id="letterForm" onsubmit="handleLetterSubmit(event)">
+              <input class="input input--dark" type="email" id="letter-email"
+                     placeholder="이메일 주소" required autocomplete="email">
+              <button type="submit" class="btn btn--black" style="width:100%;justify-content:center;">
+                구독하기
+              </button>
+            </div>
+            <p id="letterSuccess" style="display:none;margin-top:12px;font-size:0.875rem;font-weight:600;color:var(--c-purple);">
+              ✓ 구독 신청이 완료되었습니다.
+            </p>
+          </div>
+        </div>
+
+        <div>
+          <p class="label mb-24" style="color:var(--c-muted);">최신 호</p>
+
+          <div style="display:flex;flex-direction:column;gap:16px;">
+            <a href="letter/archive.html#vol01" class="vol-card">
+              <p class="vol-card__num">Vol. 01</p>
+              <p class="vol-card__title">페이팔 마피아 — 어떻게 그들은 서로를 밀어올렸나</p>
+            </a>
+            <a href="letter/archive.html#vol02" class="vol-card">
+              <p class="vol-card__num">Vol. 02</p>
+              <p class="vol-card__title">이수현 — 관계자본으로 살아가는 방식</p>
+            </a>
+          </div>
+
+          <div style="margin-top:24px;">
+            <a href="letter.html" style="font-size:0.875rem;font-weight:700;color:var(--c-black);text-decoration:none;border-bottom:2px solid var(--c-black);padding-bottom:2px;">
+              전체 아카이브 보기 →
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===================================================
+       §8 오프라인 행사 기획·운영
+       =================================================== -->
+  <section class="section section--dark" id="events-section">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;">
+
+        <div>
+          <p class="label mb-16 accent-yellow">오프라인 행사</p>
+          <h2 class="h2 mb-24">
+            오프라인 행사,<br>
+            <em style="font-style:normal;color:var(--c-yellow);">만족도와 모든 과정을<br>한 번에.</em>
+          </h2>
+          <p style="font-size:1rem;line-height:1.85;color:rgba(245,245,240,0.75);margin-bottom:40px;word-break:keep-all;">
+            행사의 만족도를 최대한 끌어올리고,<br>
+            <strong style="color:var(--c-white);">기획·홍보·운영·후속까지 한 곳에서</strong> 다룹니다.
+          </p>
+
+          <a href="events.html" class="btn btn--yellow">오프라인 행사 기획·운영 보러 가기 →</a>
+        </div>
+
+        <div>
+          <p class="label mb-20" style="color:rgba(245,245,240,0.4);">사례</p>
+          <div style="display:flex;flex-direction:column;gap:0;">
+            <div style="padding-block:16px;border-top:1px solid rgba(245,245,240,0.12);font-size:0.9375rem;color:rgba(245,245,240,0.85);">대기업 AI운동회</div>
+            <div style="padding-block:16px;border-top:1px solid rgba(245,245,240,0.12);font-size:0.9375rem;color:rgba(245,245,240,0.85);">50만 인플루언서 행사</div>
+            <div style="padding-block:16px;border-top:1px solid rgba(245,245,240,0.12);font-size:0.9375rem;color:rgba(245,245,240,0.85);">한의원 커뮤니티 코칭</div>
+            <div style="padding-block:16px;border-top:1px solid rgba(245,245,240,0.12);font-size:0.9375rem;color:rgba(245,245,240,0.85);">지역구 축제</div>
+            <div style="padding-block:16px;border-top:1px solid rgba(245,245,240,0.12);font-size:0.9375rem;color:rgba(245,245,240,0.85);">F&B 팝업</div>
+            <div style="padding-block:16px;border-top:1px solid rgba(245,245,240,0.12);border-bottom:1px solid rgba(245,245,240,0.12);font-size:0.9375rem;color:rgba(245,245,240,0.85);">네트워킹 파티</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===================================================
+       §9 FOOTER
+       =================================================== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__top">
+        <div>
+          <p class="footer__brand-name">GET<span>100</span></p>
+          <p class="footer__tagline">기업형 1인 사업가들의 커뮤니티</p>
+          <div class="footer__social">
+            <a href="#" aria-label="디스코드">Discord</a>
+            <a href="https://instagram.com/bam.bam_2" target="_blank" rel="noopener">@bam.bam_2</a>
+            <a href="#" target="_blank" rel="noopener">@겟백공식</a>
+            <a href="#" target="_blank" rel="noopener">스레드</a>
+            <a href="#" target="_blank" rel="noopener">링크드인</a>
+            <a href="#" target="_blank" rel="noopener">유튜브</a>
+          </div>
+        </div>
+
+        <div>
+          <p class="footer__nav-title">메뉴</p>
+          <ul class="footer__nav-links">
+            <li><a href="community.html">커뮤니티</a></li>
+            <li><a href="events.html">오프라인 행사 기획·운영</a></li>
+            <li><a href="letter.html">레터</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#apply">6기 신청</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="footer__nav-title">문의</p>
+          <ul class="footer__nav-links">
+            <li><a href="mailto:[FILL]">[FILL: 이메일]</a></li>
+            <li><a href="events.html#inquiry">행사 의뢰</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <div>
+          <p class="footer__biz">
+            상호: [FILL] &nbsp;·&nbsp; 사업자번호: [FILL] &nbsp;·&nbsp; 주소: [FILL]<br>
+            메일: [FILL] &nbsp;·&nbsp; 광고성 정보 수신 동의 후 마케팅 정보가 발송됩니다.
+          </p>
+          <p class="footer__copy">© 2026 GET100. All rights reserved.</p>
+        </div>
+
+        <div class="footer__policy">
+          <a href="#">개인정보처리방침</a>
+          <a href="#">이용약관</a>
+          <a href="#">광고성 정보 수신</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ===== SCRIPTS ===== -->
+  <script>
+    function toggleNav() {
+      const nav = document.getElementById('mobileNav');
+      nav.classList.toggle('open');
+    }
+
+    function handleApplySubmit(e) {
+      e.preventDefault();
+      const form = document.getElementById('applyForm');
+      const success = document.getElementById('applySuccess');
+      form.style.display = 'none';
+      success.style.display = 'block';
+      // TODO: FormSubmit / EmailJS 연동
+    }
+
+    function handleLetterSubmit(e) {
+      e.preventDefault();
+      const success = document.getElementById('letterSuccess');
+      success.style.display = 'block';
+      e.target.querySelector('button').disabled = true;
+      // TODO: Stibee API 연동
+    }
+
+    // Close nav on outside click
+    document.addEventListener('click', (e) => {
+      const nav = document.getElementById('mobileNav');
+      const toggle = document.querySelector('.nav__toggle');
+      if (!nav.contains(e.target) && !toggle.contains(e.target)) {
+        nav.classList.remove('open');
+      }
+    });
+  </script>
+
+  <style>
+    /* Index-specific responsive tweaks */
+    @media (max-width: 768px) {
+      #about-section .container > div,
+      #who .container > div,
+      #app .container > div,
+      #letter .container > div,
+      #events-section .container > div {
+        grid-template-columns: 1fr !important;
+        gap: 48px !important;
+      }
+
+      #rhythm .h1 { font-size: 1.75rem; }
+    }
+
+    @media (max-width: 600px) {
+      .grid-2 { grid-template-columns: 1fr; }
+      .price-ladder { font-size: 0.875rem; }
+    }
+  </style>
+
+</body>
+</html>
