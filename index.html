@@ -350,6 +350,7 @@
         </p>
 
         <!-- Apply form -->
+        <div style="background:var(--c-white);padding:32px;border:2px solid var(--c-black);box-shadow:5px 5px 0 0 var(--c-yellow);color:var(--c-black);">
         <form class="form" id="applyForm" onsubmit="handleApplySubmit(event)">
           <div class="form__field">
             <label class="form__label" for="apply-email">이메일 *</label>
@@ -374,6 +375,7 @@
             신청하기
           </button>
         </form>
+        </div>
 
         <p id="applySuccess" style="display:none;margin-top:20px;padding:16px 20px;border:2px solid var(--c-black);font-weight:600;font-size:0.9375rem;">
           ✓ 신청이 완료되었습니다. 밤밤이 직접 연락드릴 예정이에요.
@@ -718,8 +720,8 @@
     /* §5 proof — 카드 라임 배경 + 보라 테두리 + 흰 글씨 */
     #proof .stat-card {
       background: var(--c-white) !important;
-      border: 2px solid var(--c-purple) !important;
-      box-shadow: 5px 5px 0 0 var(--c-purple) !important;
+      border: 2px solid var(--c-yellow) !important;
+      box-shadow: 5px 5px 0 0 var(--c-yellow) !important;
     }
     #proof .quote-card {
       background: var(--c-yellow) !important;
