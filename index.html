@@ -68,17 +68,17 @@
   <!-- ===================================================
        §2 겟백이란
        =================================================== -->
-  <section class="section section--yellow" id="about-section">
+  <section class="section section--white" id="about-section">
     <div class="container">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;">
+
+        <!-- 왼쪽: 텍스트 -->
         <div>
           <span class="badge badge--purple mb-16" style="display:inline-block;">겟백이란</span>
-          <p class="h2 mb-32">우리가 자주 던지는 슬로건이 있습니다.</p>
-          <p class="h1" style="color:var(--c-black);line-height:1.15;">
+          <p class="h1 mb-32" style="color:var(--c-black);line-height:1.15;word-break:keep-all;">
             "100명의 관계자본을<br>얻어라."
           </p>
-        </div>
-        <div style="padding-top:clamp(0px,4vw,56px);">
+
           <div class="stack gap-24" style="font-size:1rem;line-height:1.85;color:#333;word-break:keep-all;">
             <p>처음 들으면 인맥 만들라는 말처럼 들립니다. 그런데 진짜 의미는 그 다음에 있어요.</p>
             <p>
@@ -95,6 +95,17 @@
             </p>
           </div>
         </div>
+
+        <!-- 오른쪽: 사진 홀더 -->
+        <div style="aspect-ratio:4/5;background:var(--c-off-white, #e8e8e3);border:2px solid var(--c-black);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;">
+          <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="6" y="10" width="36" height="28" rx="0" stroke="#0d0d0d" stroke-width="2"/>
+            <circle cx="18" cy="22" r="4" stroke="#0d0d0d" stroke-width="2"/>
+            <path d="M6 32L16 22L22 28L30 20L42 32" stroke="#0d0d0d" stroke-width="2"/>
+          </svg>
+          <p style="font-size:0.75rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--c-muted);">Photo</p>
+        </div>
+
       </div>
     </div>
   </section>
@@ -228,82 +239,134 @@
       <span class="badge badge--yellow mb-16" style="display:inline-block;">사회적 증명</span>
       <h2 class="h2 mb-48">멤버들이 만든 진짜 변화</h2>
 
-      <!-- Stat cards -->
-      <div class="grid-4" style="margin-bottom:120px;">
+      <!-- Stat bar -->
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(245,245,240,0.15);margin-bottom:80px;">
 
-        <div class="stat-card">
-          <p class="stat-card__who">강사·예비 1인 사업자</p>
-          <p class="stat-card__num">8.7만 뷰<br>+821 팔로워</p>
+        <div style="padding:40px 0 40px;border-right:1px solid rgba(245,245,240,0.15);padding-right:32px;">
+          <p style="font-size:clamp(1.75rem,3vw,2.5rem);font-weight:800;letter-spacing:-0.03em;color:var(--c-yellow);line-height:1.1;margin-bottom:12px;">8.7만 뷰<br>+821</p>
+          <p style="font-size:0.8125rem;color:rgba(245,245,240,0.5);line-height:1.6;">강사·예비 1인 사업자<br>팔로워 증가</p>
         </div>
 
-        <div class="stat-card">
-          <p class="stat-card__who">대기업 인사담당자·강남 카페 사장</p>
-          <p class="stat-card__num">월 +20만 뷰<br>+1,000 팔로워</p>
+        <div style="padding:40px 32px;border-right:1px solid rgba(245,245,240,0.15);">
+          <p style="font-size:clamp(1.75rem,3vw,2.5rem);font-weight:800;letter-spacing:-0.03em;color:var(--c-yellow);line-height:1.1;margin-bottom:12px;">월 +20만<br>+1,000</p>
+          <p style="font-size:0.8125rem;color:rgba(245,245,240,0.5);line-height:1.6;">대기업 인사담당자·강남 카페 사장<br>뷰 &amp; 팔로워</p>
         </div>
 
-        <div class="stat-card">
-          <p class="stat-card__who">인터넷 언론사 대표</p>
-          <p class="stat-card__num" style="font-size:1.125rem;">무료 기사 →<br><span style="font-size:1.5rem;">300만원</span> 계약 성사</p>
+        <div style="padding:40px 32px;border-right:1px solid rgba(245,245,240,0.15);">
+          <p style="font-size:clamp(1.75rem,3vw,2.5rem);font-weight:800;letter-spacing:-0.03em;color:var(--c-yellow);line-height:1.1;margin-bottom:12px;">300만원<br>계약</p>
+          <p style="font-size:0.8125rem;color:rgba(245,245,240,0.5);line-height:1.6;">인터넷 언론사 대표<br>무료 기사 → 유료 계약 성사</p>
         </div>
 
-        <div class="stat-card">
-          <p class="stat-card__who">디자인 스튜디오 1인 사업가</p>
-          <p class="stat-card__num">조회수 5배<br>커피챗 문의 다수</p>
+        <div style="padding:40px 0 40px 32px;">
+          <p style="font-size:clamp(1.75rem,3vw,2.5rem);font-weight:800;letter-spacing:-0.03em;color:var(--c-yellow);line-height:1.1;margin-bottom:12px;">조회수<br>5배</p>
+          <p style="font-size:0.8125rem;color:rgba(245,245,240,0.5);line-height:1.6;">디자인 스튜디오 1인 사업가<br>커피챗 문의 다수</p>
         </div>
 
       </div>
 
-      <!-- Quotes -->
-      <div class="grid-2" style="gap:20px;">
+      <!-- Quotes — 무한 마퀴 -->
+      <div class="marquee-outer">
+        <div class="marquee-track">
 
-        <div class="quote-card">
-          <div class="quote-card__who">
-            <div class="quote-card__dot quote-card__dot--purple"></div>
-            <span class="quote-card__label">1기 멤버 · 소통·NVC 강사</span>
+          <!-- 원본 6장 -->
+          <div class="quote-card marquee-card">
+            <div class="quote-card__who">
+              <div class="quote-card__dot quote-card__dot--purple"></div>
+              <span class="quote-card__label">1기 멤버 · 소통·NVC 강사</span>
+            </div>
+            <p class="quote-card__text">"과거에는 관계가 시간이 지나면 끊어졌는데, 이제는 내가 소중하게 여기는 사람을 인지하고 서로 협력할 수 있도록 시스템을 만들게 되었어요."</p>
           </div>
-          <p class="quote-card__text">"과거에는 관계가 시간이 지나면 끊어졌는데, 이제는 내가 소중하게 여기는 사람을 인지하고 서로 협력할 수 있도록 시스템을 만들게 되었어요."</p>
-        </div>
 
-        <div class="quote-card">
-          <div class="quote-card__who">
-            <div class="quote-card__dot quote-card__dot--purple"></div>
-            <span class="quote-card__label">2기 멤버 · 책쓰기 코호트 운영자</span>
+          <div class="quote-card marquee-card">
+            <div class="quote-card__who">
+              <div class="quote-card__dot quote-card__dot--purple"></div>
+              <span class="quote-card__label">2기 멤버 · 책쓰기 코호트 운영자</span>
+            </div>
+            <p class="quote-card__text">"예전에는 어디선가 좋은 기회가 들어오기만을 마냥 기다렸어요. 지금은 어떤 고민이 생겼을 때 누구와 함께 하면 좋을지 정하고, 그 의도에 맞는 콘텐츠를 적게 됐어요."</p>
           </div>
-          <p class="quote-card__text">"예전에는 어디선가 좋은 기회가 들어오기만을 마냥 기다렸어요. 지금은 어떤 고민이 생겼을 때 누구와 함께 하면 좋을지 정하고, 그 의도에 맞는 콘텐츠를 적게 됐어요."</p>
-        </div>
 
-        <div class="quote-card">
-          <div class="quote-card__who">
-            <div class="quote-card__dot quote-card__dot--purple"></div>
-            <span class="quote-card__label">3기 멤버 · 노션 크리에이터</span>
+          <div class="quote-card marquee-card">
+            <div class="quote-card__who">
+              <div class="quote-card__dot quote-card__dot--purple"></div>
+              <span class="quote-card__label">3기 멤버 · 노션 크리에이터</span>
+            </div>
+            <p class="quote-card__text">"AI를 통해 어떻게 글을 정제해서 쓸 수 있는지 알게 되었고, 거의 대부분의 커피챗과 협업 요청이 스레드로 들어옵니다."</p>
           </div>
-          <p class="quote-card__text">"AI를 통해 어떻게 글을 정제해서 쓸 수 있는지 알게 되었고, 거의 대부분의 커피챗과 협업 요청이 스레드로 들어옵니다."</p>
-        </div>
 
-        <div class="quote-card">
-          <div class="quote-card__who">
-            <div class="quote-card__dot quote-card__dot--purple"></div>
-            <span class="quote-card__label">4기 멤버 · 개발 콘텐츠 1인 사업가</span>
+          <div class="quote-card marquee-card">
+            <div class="quote-card__who">
+              <div class="quote-card__dot quote-card__dot--purple"></div>
+              <span class="quote-card__label">4기 멤버 · 개발 콘텐츠 1인 사업가</span>
+            </div>
+            <p class="quote-card__text">"모객, 고객 만들기에 초점을 두었었다면, 나를 드러내는 것을 좀 더 해보고 있습니다."</p>
           </div>
-          <p class="quote-card__text">"모객, 고객 만들기에 초점을 두었었다면, 나를 드러내는 것을 좀 더 해보고 있습니다."</p>
-        </div>
 
-        <div class="quote-card">
-          <div class="quote-card__who">
-            <div class="quote-card__dot quote-card__dot--purple"></div>
-            <span class="quote-card__label">1·4기 멤버 · 성교육 강사</span>
+          <div class="quote-card marquee-card">
+            <div class="quote-card__who">
+              <div class="quote-card__dot quote-card__dot--purple"></div>
+              <span class="quote-card__label">1·4기 멤버 · 성교육 강사</span>
+            </div>
+            <p class="quote-card__text">"내가 어떤 사람들과 네트워킹 해야 할지 보게 되었고, 어디서라도 일감을 따올 수 있다는 자신감이 생겼습니다."</p>
           </div>
-          <p class="quote-card__text">"내가 어떤 사람들과 네트워킹 해야 할지 보게 되었고, 어디서라도 일감을 따올 수 있다는 자신감이 생겼습니다."</p>
-        </div>
 
-        <div class="quote-card">
-          <div class="quote-card__who">
-            <div class="quote-card__dot quote-card__dot--purple"></div>
-            <span class="quote-card__label">2기 멤버 · 티앤웰니스 디렉터·작가</span>
+          <div class="quote-card marquee-card">
+            <div class="quote-card__who">
+              <div class="quote-card__dot quote-card__dot--purple"></div>
+              <span class="quote-card__label">2기 멤버 · 티앤웰니스 디렉터·작가</span>
+            </div>
+            <p class="quote-card__text">"본질을 쫓는 이들은 결국 만난다는 생각을 하게 됐고, 꾸준히 지속할 수 있는 편안함이 SNS의 본질임을 다시 깨달았어요."</p>
           </div>
-          <p class="quote-card__text">"본질을 쫓는 이들은 결국 만난다는 생각을 하게 됐고, 꾸준히 지속할 수 있는 편안함이 SNS의 본질임을 다시 깨달았어요."</p>
-        </div>
 
+          <!-- 복제본 6장 (무한 루프용) -->
+          <div class="quote-card marquee-card">
+            <div class="quote-card__who">
+              <div class="quote-card__dot quote-card__dot--purple"></div>
+              <span class="quote-card__label">1기 멤버 · 소통·NVC 강사</span>
+            </div>
+            <p class="quote-card__text">"과거에는 관계가 시간이 지나면 끊어졌는데, 이제는 내가 소중하게 여기는 사람을 인지하고 서로 협력할 수 있도록 시스템을 만들게 되었어요."</p>
+          </div>
+
+          <div class="quote-card marquee-card">
+            <div class="quote-card__who">
+              <div class="quote-card__dot quote-card__dot--purple"></div>
+              <span class="quote-card__label">2기 멤버 · 책쓰기 코호트 운영자</span>
+            </div>
+            <p class="quote-card__text">"예전에는 어디선가 좋은 기회가 들어오기만을 마냥 기다렸어요. 지금은 어떤 고민이 생겼을 때 누구와 함께 하면 좋을지 정하고, 그 의도에 맞는 콘텐츠를 적게 됐어요."</p>
+          </div>
+
+          <div class="quote-card marquee-card">
+            <div class="quote-card__who">
+              <div class="quote-card__dot quote-card__dot--purple"></div>
+              <span class="quote-card__label">3기 멤버 · 노션 크리에이터</span>
+            </div>
+            <p class="quote-card__text">"AI를 통해 어떻게 글을 정제해서 쓸 수 있는지 알게 되었고, 거의 대부분의 커피챗과 협업 요청이 스레드로 들어옵니다."</p>
+          </div>
+
+          <div class="quote-card marquee-card">
+            <div class="quote-card__who">
+              <div class="quote-card__dot quote-card__dot--purple"></div>
+              <span class="quote-card__label">4기 멤버 · 개발 콘텐츠 1인 사업가</span>
+            </div>
+            <p class="quote-card__text">"모객, 고객 만들기에 초점을 두었었다면, 나를 드러내는 것을 좀 더 해보고 있습니다."</p>
+          </div>
+
+          <div class="quote-card marquee-card">
+            <div class="quote-card__who">
+              <div class="quote-card__dot quote-card__dot--purple"></div>
+              <span class="quote-card__label">1·4기 멤버 · 성교육 강사</span>
+            </div>
+            <p class="quote-card__text">"내가 어떤 사람들과 네트워킹 해야 할지 보게 되었고, 어디서라도 일감을 따올 수 있다는 자신감이 생겼습니다."</p>
+          </div>
+
+          <div class="quote-card marquee-card">
+            <div class="quote-card__who">
+              <div class="quote-card__dot quote-card__dot--purple"></div>
+              <span class="quote-card__label">2기 멤버 · 티앤웰니스 디렉터·작가</span>
+            </div>
+            <p class="quote-card__text">"본질을 쫓는 이들은 결국 만난다는 생각을 하게 됐고, 꾸준히 지속할 수 있는 편안함이 SNS의 본질임을 다시 깨달았어요."</p>
+          </div>
+
+        </div>
       </div>
     </div>
   </section>
@@ -740,7 +803,7 @@
       box-shadow: 5px 5px 0 0 var(--c-yellow) !important;
     }
     #proof .quote-card {
-      background: var(--c-yellow) !important;
+      background: var(--c-white) !important;
       border: 2px solid var(--c-purple) !important;
       box-shadow: 5px 5px 0 0 var(--c-purple) !important;
     }
@@ -751,6 +814,32 @@
       color: var(--c-black) !important;
     }
     #proof .stat-card__num span { color: var(--c-black) !important; }
+
+    /* ===== 마퀴 애니메이션 ===== */
+    @keyframes marquee-ltr {
+      0%   { transform: translateX(-50%); }
+      100% { transform: translateX(0); }
+    }
+
+    .marquee-outer {
+      overflow: hidden;
+      margin-inline: calc(-1 * var(--pad-x));
+      padding-block: 4px;
+    }
+
+    .marquee-track {
+      display: flex;
+      gap: 20px;
+      width: max-content;
+      animation: marquee-ltr 30s linear infinite;
+    }
+
+    .marquee-track:hover { animation-play-state: paused; }
+
+    .marquee-card {
+      width: 340px;
+      flex-shrink: 0;
+    }
 
     /* Index-specific responsive tweaks */
     @media (max-width: 768px) {
