@@ -638,6 +638,53 @@ h3, .h3 {
 
 /* === SECTION-SPECIFIC OVERRIDES === */
 
+/* ──────────────────────────────────────────
+   Hero — 배경 클래스만 바꾸면 요소 색 자동 적응
+   어두운 배경 (dark / purple / gray): 라임 뱃지, 흰 텍스트, 흰 아웃라인
+   밝은 배경  (white / yellow):        검정 뱃지, 검정 텍스트, 검정 아웃라인
+   ────────────────────────────────────────── */
+#hero.section--dark,
+#hero.section--purple,
+#hero.section--gray {
+  --h-badge-bg:           var(--c-yellow);
+  --h-badge-color:        var(--c-black);
+  --h-subtitle:           rgba(245,245,240,0.72);
+  --h-outline-border:     rgba(245,245,240,0.55);
+  --h-outline-text:       var(--c-white);
+  --h-outline-shadow:     var(--c-white);
+}
+
+#hero.section--white,
+#hero.section--yellow {
+  --h-badge-bg:           var(--c-black);
+  --h-badge-color:        var(--c-white);
+  --h-subtitle:           rgba(13,13,13,0.65);
+  --h-outline-border:     rgba(13,13,13,0.55);
+  --h-outline-text:       var(--c-black);
+  --h-outline-shadow:     var(--c-black);
+}
+
+/* 토큰 적용 */
+#hero .badge {
+  background:   var(--h-badge-bg,    var(--c-yellow)) !important;
+  color:        var(--h-badge-color, var(--c-black))  !important;
+  border-color: var(--h-badge-bg,    var(--c-yellow)) !important;
+}
+
+#hero .body-lg {
+  color: var(--h-subtitle, rgba(245,245,240,0.72)) !important;
+}
+
+#hero .btn--outline-white,
+#hero .btn--outline-black {
+  border-color: var(--h-outline-border, rgba(245,245,240,0.55)) !important;
+  color:        var(--h-outline-text,   var(--c-white))          !important;
+}
+#hero .btn--outline-white:hover,
+#hero .btn--outline-black:hover {
+  box-shadow: 8px 8px 0 0 var(--h-outline-shadow, var(--c-white)) !important;
+}
+
 /* Hero divider line */
 .hero__divider {
   width: 40px;
@@ -691,15 +738,30 @@ h3, .h3 {
 }
 
 .about2__strip {
-  display: flex;
-  align-items: flex-end;
+  overflow: hidden;
   width: 100%;
 }
 
+.about2__slide-track {
+  display: flex;
+  align-items: flex-end;
+  width: max-content;
+  animation: img-slide 16s linear infinite;
+}
+
+.about2__slide-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes img-slide {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
 .about2__img {
-  flex: 1;
+  width: 28vw;
+  flex-shrink: 0;
   overflow: hidden;
-  min-width: 0;
   transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
   cursor: pointer;
 }
@@ -721,11 +783,9 @@ h3, .h3 {
   transform: scale(1.04);
 }
 
-.about2__img--hi { margin-top: 0; }
-.about2__img--lo { margin-top: 0; }
-
 @media (max-width: 640px) {
-  .about2__img img { height: 240px; }
+  .about2__img { width: 72vw; }
+  .about2__img img { height: 260px; }
 }
 
 /* Curriculum deliverables layout */
@@ -759,9 +819,10 @@ h3, .h3 {
 }
 
 .curri__title {
-  font-size: clamp(2.5rem, 6vw, 5.5rem);
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
   font-weight: 700;
-  line-height: 1.05;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
   text-align: left;
 }
 
@@ -769,6 +830,7 @@ h3, .h3 {
 
 .curri__item { border-top: 1px solid rgba(245,245,240,0.18); }
 .curri__item:last-child { border-bottom: 1px solid rgba(245,245,240,0.18); }
+
 
 .curri__item-head {
   padding-top: 16px;
@@ -792,18 +854,16 @@ h3, .h3 {
 }
 
 .curri__item-title {
-  font-size: clamp(1.375rem, 2.5vw, 2rem);
+  font-size: clamp(1.125rem, 2vw, 1.5rem);
   font-weight: 700;
-  font-style: italic;
-  text-transform: uppercase;
-  line-height: 1.1;
-  letter-spacing: -0.01em;
+  line-height: 1.3;
+  word-break: keep-all;
 }
 
 .curri__item-desc {
   font-size: 0.9375rem;
   line-height: 1.75;
-  opacity: 0.7;
+  color: var(--c-white);
   padding-top: 4px;
 }
 
@@ -932,6 +992,37 @@ h3, .h3 {
   color: var(--c-yellow);
   letter-spacing: 0.08em;
   padding-top: 2px;
+}
+
+/* feature-list emoji hover */
+.feature-list__item--emoji {
+  position: relative;
+  overflow: hidden;
+  cursor: default;
+}
+
+.feature-list__item--emoji::after {
+  content: attr(data-emoji);
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%) translateX(20px) scale(0.6);
+  font-size: 1.75rem;
+  opacity: 0;
+  transition: opacity 0.25s ease, transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  pointer-events: none;
+  line-height: 1;
+}
+
+.feature-list__item--emoji:hover::after {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0) scale(1);
+}
+
+.feature-list__item--emoji:hover .feature-list__num,
+.feature-list__item--emoji:hover .feature-list__text {
+  transform: translateX(-4px);
+  transition: transform 0.25s ease;
 }
 
 /* feature-list on white bg */
