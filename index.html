@@ -64,28 +64,28 @@
 
 
   <!-- ===================================================
-       §2 겟백이란
+       §2 GET100이란
        =================================================== -->
   <section class="section section--white about2" id="about-section">
 
     <div class="container">
       <div class="about2__top">
-        <p class="about2__label">(겟백이란)</p>
-        <p class="about2__lead">
-          GET100은 기업형 1인 사업가들의 커뮤니티입니다. 우리가 말하는 <strong>관계자본</strong>은 함께 일을 해본 사람한테서 쌓이는 자본입니다. 그걸 얻는 방식이 — 이타적 기회주의자로 사는 것. 먼저 흔쾌히 줍니다. 그러면 관계가 쌓이고, 기회가 옵니다. 받았으니 또 줍니다. 이 순환이 작동하는 100명.
-        </p>
+        <div style="max-width:1000px; margin-inline:auto;">
+          <p class="about2__label">(GET100이란)</p>
+          <p class="about2__lead">
+            GET100은 기업형 1인 사업가들의 커뮤니티입니다. 우리가 말하는 <strong>관계자본</strong>은 함께 일을 해본 사람한테서 쌓이는 자본입니다. 그걸 얻는 방식이 — 이타적 기회주의자로 사는 것. 먼저 흔쾌히 줍니다. 그러면 관계가 쌓이고, 기회가 옵니다. 받았으니 또 줍니다. 이 순환이 작동하는 100명.
+          </p>
+        </div>
       </div>
     </div>
 
     <!-- 풀블리드 이미지 슬라이드 -->
     <div class="about2__strip">
       <div class="about2__slide-track">
-        <!-- 원본 -->
         <div class="about2__img"><img src="image/20240330_154853.jpg" alt="GET100 멤버"></div>
         <div class="about2__img"><img src="image/KakaoTalk_20241214_004503366_11.jpg" alt="GET100 멤버"></div>
         <div class="about2__img"><img src="image/KakaoTalk_20250425_155043100_03.jpg" alt="GET100 멤버"></div>
         <div class="about2__img"><img src="image/KakaoTalk_20260129_165923470_06.jpg" alt="GET100 멤버"></div>
-        <!-- 복제 (seamless loop) -->
         <div class="about2__img"><img src="image/20240330_154853.jpg" alt="GET100 멤버"></div>
         <div class="about2__img"><img src="image/KakaoTalk_20241214_004503366_11.jpg" alt="GET100 멤버"></div>
         <div class="about2__img"><img src="image/KakaoTalk_20250425_155043100_03.jpg" alt="GET100 멤버"></div>
@@ -571,65 +571,8 @@
   <!-- ===================================================
        §7 밤밤의 GET100 레터
        =================================================== -->
-  <section class="section section--yellow" id="letter">
-    <div class="container">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;">
-
-        <div>
-          <span class="badge badge--black mb-16" style="display:inline-block;">뉴스레터</span>
-          <h2 class="h2 mb-24">밤밤의 GET100 레터</h2>
-          <p style="font-size:1rem;line-height:1.85;color:#444;margin-bottom:12px;word-break:keep-all;">
-            1인 사업가가 결국 다뤄야 할 것들 —
-          </p>
-          <p style="font-size:1rem;line-height:1.85;color:#444;margin-bottom:32px;word-break:keep-all;">
-            <em>연결·AI·시스템·콘텐츠로 살아가는 사람들의 이야기</em>를 전해드려요.
-          </p>
-          <p style="font-size:0.8125rem;font-weight:600;color:var(--c-purple);letter-spacing:0.04em;margin-bottom:40px;">
-            격주 수요일 도착
-          </p>
-
-          <!-- Stibee embed placeholder -->
-          <div class="form-box" style="padding:28px;border:2px solid var(--c-black);background:var(--c-white);box-shadow:5px 5px 0 0 var(--c-black);">
-            <p class="form-box__label" style="font-size:0.75rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--c-muted);margin-bottom:16px;">구독하기</p>
-            <!-- Stibee 폼 임베드 위치 — Stibee 셋업 후 코드 교체 -->
-            <div class="form" id="letterForm" onsubmit="handleLetterSubmit(event)">
-              <input class="input input--dark" type="email" id="letter-email"
-                     placeholder="이메일 주소" required autocomplete="email">
-              <button type="submit" class="btn btn--black" style="width:100%;justify-content:center;">
-                구독하기
-              </button>
-            </div>
-            <p id="letterSuccess" style="display:none;margin-top:12px;font-size:0.875rem;font-weight:600;color:var(--c-purple);">
-              ✓ 구독 신청이 완료되었습니다.
-            </p>
-          </div>
-        </div>
-
-        <div>
-          <span class="badge badge--black mb-24" style="display:inline-block;">최신 호</span>
-
-          <div style="display:flex;flex-direction:column;gap:16px;">
-            <a href="letter/archive.html#vol01" class="vol-card">
-              <p class="vol-card__num">Vol. 01</p>
-              <p class="vol-card__title">페이팔 마피아 — 어떻게 그들은 서로를 밀어올렸나</p>
-            </a>
-            <a href="letter/archive.html#vol02" class="vol-card">
-              <p class="vol-card__num">Vol. 02</p>
-              <p class="vol-card__title">이수현 — 관계자본으로 살아가는 방식</p>
-            </a>
-            <a href="letter.html" style="font-size:0.875rem;font-weight:700;color:var(--c-black);text-decoration:none;border-bottom:2px solid var(--c-black);padding-bottom:2px;display:inline-block;margin-top:8px;">
-              전체 아카이브 보기 →
-            </a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
   <!-- ===================================================
-       §8 오프라인 행사 기획·운영
+       §7 오프라인 행사 기획·운영
        =================================================== -->
   <section class="section section--white" id="events-section">
     <div class="container">
@@ -667,6 +610,65 @@
 
 
   <!-- ===================================================
+       §8 뉴스레터
+       =================================================== -->
+  <section class="section section--yellow" id="letter">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;">
+
+        <div>
+          <span class="badge badge--black mb-16" style="display:inline-block;">뉴스레터</span>
+          <h2 class="h2 mb-24">밤밤의 GET100 레터</h2>
+          <p style="font-size:1rem;line-height:1.85;color:#444;margin-bottom:12px;word-break:keep-all;">
+            1인 사업가가 결국 다뤄야 할 것들 —
+          </p>
+          <p style="font-size:1rem;line-height:1.85;color:#444;margin-bottom:32px;word-break:keep-all;">
+            <em>연결·AI·시스템·콘텐츠로 살아가는 사람들의 이야기</em>를 전해드려요.
+          </p>
+          <p style="font-size:0.8125rem;font-weight:600;color:var(--c-purple);letter-spacing:0.04em;margin-bottom:40px;">
+            격주 수요일 도착
+          </p>
+
+          <!-- Stibee embed placeholder -->
+          <div class="form-box" style="padding:28px;border:2px solid var(--c-black);background:var(--c-white);box-shadow:5px 5px 0 0 var(--c-black);">
+            <p class="form-box__label" style="font-size:0.75rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--c-muted);margin-bottom:16px;">구독하기</p>
+            <div class="form" id="letterForm" onsubmit="handleLetterSubmit(event)">
+              <input class="input input--dark" type="email" id="letter-email"
+                     placeholder="이메일 주소" required autocomplete="email">
+              <button type="submit" class="btn btn--black" style="width:100%;justify-content:center;">
+                구독하기
+              </button>
+            </div>
+            <p id="letterSuccess" style="display:none;margin-top:12px;font-size:0.875rem;font-weight:600;color:var(--c-purple);">
+              ✓ 구독 신청이 완료되었습니다.
+            </p>
+          </div>
+        </div>
+
+        <div>
+          <span class="badge badge--black mb-24" style="display:inline-block;">최신 호</span>
+
+          <div style="display:flex;flex-direction:column;gap:16px;">
+            <a href="letter/archive.html#vol01" class="vol-card">
+              <p class="vol-card__num">Vol. 01</p>
+              <p class="vol-card__title">페이팔 마피아 — 어떻게 그들은 서로를 밀어올렸나</p>
+            </a>
+            <a href="letter/archive.html#vol02" class="vol-card">
+              <p class="vol-card__num">Vol. 02</p>
+              <p class="vol-card__title">이수현 — 관계자본으로 살아가는 방식</p>
+            </a>
+            <a href="letter.html" style="font-size:0.875rem;font-weight:700;color:var(--c-black);text-decoration:none;border-bottom:2px solid var(--c-black);padding-bottom:2px;display:inline-block;margin-top:8px;">
+              전체 아카이브 보기 →
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===================================================
        §9 FOOTER
        =================================================== -->
   <footer class="footer">
@@ -678,7 +680,7 @@
           <div class="footer__social">
             <a href="#" aria-label="디스코드">Discord</a>
             <a href="https://instagram.com/bam.bam_2" target="_blank" rel="noopener">@bam.bam_2</a>
-            <a href="#" target="_blank" rel="noopener">@겟백공식</a>
+            <a href="#" target="_blank" rel="noopener">@GET100공식</a>
             <a href="#" target="_blank" rel="noopener">스레드</a>
             <a href="#" target="_blank" rel="noopener">링크드인</a>
             <a href="#" target="_blank" rel="noopener">유튜브</a>
@@ -1030,5 +1032,7 @@
     }
   </style>
 
+
+  <script src="js/reveal.js"></script>
 </body>
 </html>

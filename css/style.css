@@ -163,9 +163,9 @@ h3, .h3 {
 
 /* 네비(검정 배경): 노란 버튼 그림자를 흰색으로 */
 .nav .btn--yellow {
-  box-shadow: 5px 5px 0 0 var(--c-white);
+  box-shadow: 5px 5px 0 0 var(--c-black);
 }
-.nav .btn--yellow:hover  { box-shadow: 8px 8px 0 0 var(--c-white); }
+.nav .btn--yellow:hover  { box-shadow: 8px 8px 0 0 var(--c-black); }
 .nav .btn--yellow:active { box-shadow: none; }
 
 /* Section color themes */
@@ -280,6 +280,7 @@ h3, .h3 {
 .btn--shadow-lime { box-shadow: 5px 5px 0 0 var(--c-yellow); }
 .btn--shadow-lime:hover  { box-shadow: 8px 8px 0 0 var(--c-yellow); }
 .btn--shadow-lime:active { box-shadow: none; }
+
 
 .btn--white {
   background: var(--c-white);
@@ -468,6 +469,8 @@ h3, .h3 {
 
 .nav__cta {
   flex-shrink: 0;
+  font-size: 0.8125rem;
+  padding: 6px 14px;
 }
 
 /* Hamburger */
@@ -520,10 +523,9 @@ h3, .h3 {
 
 /* === FOOTER === */
 .footer {
-  background: var(--c-white);
-  color: var(--c-black);
+  background: var(--c-black);
+  color: var(--c-white);
   padding-block: 64px 40px;
-  border-top: 2px solid rgba(13,13,13,0.12);
 }
 
 .footer__inner {
@@ -537,7 +539,7 @@ h3, .h3 {
   grid-template-columns: 2fr 1fr 1fr;
   gap: 48px;
   padding-bottom: 48px;
-  border-bottom: 1px solid rgba(13,13,13,0.12);
+  border-bottom: 1px solid rgba(245,245,240,0.12);
 }
 
 .footer__brand-name {
@@ -545,14 +547,14 @@ h3, .h3 {
   font-weight: 800;
   letter-spacing: -0.02em;
   margin-bottom: 8px;
-  color: var(--c-black);
+  color: var(--c-white);
 }
 
 .footer__brand-name span { color: var(--c-yellow); }
 
 .footer__tagline {
   font-size: 0.875rem;
-  color: rgba(13,13,13,0.5);
+  color: rgba(245,245,240,0.45);
   margin-bottom: 24px;
 }
 
@@ -567,19 +569,19 @@ h3, .h3 {
   padding: 5px 12px;
   font-size: 0.75rem;
   font-weight: 600;
-  color: var(--c-black);
+  color: var(--c-white);
   text-decoration: none;
-  border: 1.5px solid rgba(13,13,13,0.25);
+  border: 1.5px solid rgba(245,245,240,0.25);
   transition: border-color var(--t-fast), color var(--t-fast);
 }
-.footer__social a:hover { border-color: var(--c-yellow); color: var(--c-black); }
+.footer__social a:hover { border-color: var(--c-yellow); color: var(--c-yellow); }
 
 .footer__nav-title {
   font-size: 0.6875rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(13,13,13,0.4);
+  color: rgba(245,245,240,0.35);
   margin-bottom: 20px;
 }
 
@@ -592,11 +594,11 @@ h3, .h3 {
 
 .footer__nav-links a {
   font-size: 0.875rem;
-  color: rgba(13,13,13,0.65);
+  color: rgba(245,245,240,0.6);
   text-decoration: none;
   transition: color var(--t-fast);
 }
-.footer__nav-links a:hover { color: var(--c-black); }
+.footer__nav-links a:hover { color: var(--c-yellow); }
 
 .footer__bottom {
   display: flex;
@@ -608,7 +610,7 @@ h3, .h3 {
 
 .footer__biz {
   font-size: 0.75rem;
-  color: rgba(13,13,13,0.4);
+  color: rgba(245,245,240,0.3);
   line-height: 1.8;
 }
 
@@ -620,21 +622,32 @@ h3, .h3 {
 
 .footer__policy a {
   font-size: 0.75rem;
-  color: rgba(13,13,13,0.4);
+  color: rgba(245,245,240,0.35);
   text-decoration: none;
   transition: color var(--t-fast);
 }
-.footer__policy a:hover { color: var(--c-black); }
+.footer__policy a:hover { color: var(--c-yellow); }
 
 .footer__copy {
   font-size: 0.75rem;
-  color: rgba(13,13,13,0.25);
+  color: rgba(245,245,240,0.2);
   margin-top: 8px;
 }
 
 @media (max-width: 768px) {
   .footer__top { grid-template-columns: 1fr; gap: 32px; }
   .footer__bottom { flex-direction: column; }
+}
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(36px);
+  transition: opacity 0.7s cubic-bezier(0.22,1,0.36,1), transform 0.7s cubic-bezier(0.22,1,0.36,1);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* === SECTION-SPECIFIC OVERRIDES === */
@@ -716,8 +729,8 @@ h3, .h3 {
 }
 
 .about2__top {
+  margin-bottom: 169px;
   text-align: center;
-  margin-bottom: 216px;
 }
 
 .about2__label {
@@ -736,7 +749,10 @@ h3, .h3 {
   word-break: keep-all;
   max-width: 1000px;
   margin-inline: auto;
+  text-align: center;
+  text-wrap: balance;
 }
+
 
 .about2__strip {
   overflow: hidden;
@@ -750,9 +766,6 @@ h3, .h3 {
   animation: img-slide 16s linear infinite;
 }
 
-.about2__slide-track:hover {
-  animation-play-state: paused;
-}
 
 @keyframes img-slide {
   0%   { transform: translateX(0); }
@@ -767,9 +780,6 @@ h3, .h3 {
   cursor: pointer;
 }
 
-.about2__img:hover {
-  transform: translateY(-28px);
-}
 
 .about2__img img {
   width: 100%;
@@ -780,9 +790,6 @@ h3, .h3 {
   transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.about2__img:hover img {
-  transform: scale(1.04);
-}
 
 @media (max-width: 640px) {
   .about2__img { width: 72vw; }
